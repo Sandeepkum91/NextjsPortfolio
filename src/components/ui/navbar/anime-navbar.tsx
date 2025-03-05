@@ -26,6 +26,8 @@ export function AnimeNavBar({ items, className, defaultActive = "Home" }: NavBar
   const [activeTab, setActiveTab] = useState<string>(defaultActive)
   const [isMobile, setIsMobile] = useState(false)
 
+  console.log(items,"item=====")
+
   useEffect(() => {
     setMounted(true)
   }, [])

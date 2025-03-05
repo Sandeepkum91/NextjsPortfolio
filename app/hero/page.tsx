@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import { LayoutGroup, motion } from "framer-motion";
-import { TextRotate } from "@/src/components/components/ui/text-rotate";
+import { TextRotate } from "@/src/components/ui/text-rotate";
 import Floating, {
   FloatingElement,
-} from "@/src/components/components/ui/parallax-floating";
+} from "@/src/components/ui/parallax-floating";
 
 // import Floating, { FloatingElement } from "@/components/ui/parallax-floating"
 
@@ -229,4 +229,4 @@ function LandingHero() {
   );
 }
 
-export { LandingHero };
+export default  LandingHero ;

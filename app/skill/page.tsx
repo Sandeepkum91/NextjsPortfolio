@@ -1,13 +1,16 @@
 import { Sparkles } from "lucide-react";
-import { IconCloud } from "../skillicon";
-import DisplayCards from "@/src/components/skillcard";
+// import { IconCloud } from "../skillicon";
+import DisplayCards from "@/src/components/ui/skillcard";
+import { TextRevealCard } from "@/src/components/ui/text-reveal-card";
+import { IconCloud } from "@/src/components/ui/skillicon";
+// import { TextRevealCard } from "../text-reveal-card";
 
 const defaultCards = [
   {
     icon: <Sparkles className="size-4 text-blue-300" />,
     title: "Development",
-    description: "Discover amazing content",
-    date: "Just now",
+    description: "Building scalable and efficient application",
+    // date: "Just now",
     iconClassName: "text-blue-500",
     titleClassName: "text-blue-500",
     className:
@@ -15,9 +18,9 @@ const defaultCards = [
   },
   {
     icon: <Sparkles className="size-4 text-blue-300" />,
-    title: "Popular",
-    description: "Trending this week",
-    date: "2 days ago",
+    title: "UI/UX Design",
+    description: "Intuitive & Aesthetic Design",
+    // date: "2 days ago",
     iconClassName: "text-blue-500",
     titleClassName: "text-blue-500",
     className:
@@ -25,23 +28,13 @@ const defaultCards = [
   },
   {
     icon: <Sparkles className="size-4 text-blue-300" />,
-    title: "New",
-    description: "Latest updates and features",
-    date: "Today",
+    title: "DevOps & Cloud",
+    description: "Cloud & Workflow Automation",
+    // date: "Today",
     iconClassName: "text-blue-500",
     titleClassName: "text-blue-500",
     className:
       "[grid-area:stack] translate-x-24 translate-y-20 hover:translate-y-10",
-  },
-  {
-    icon: <Sparkles className="size-4 text-blue-300" />,
-    title: "New",
-    description: "Latest updates and features",
-    date: "Today",
-    iconClassName: "text-blue-500",
-    titleClassName: "text-blue-500",
-    className:
-      "[grid-area:stack] translate-x-34 translate-y-32 hover:translate-y-14",
   },
 ];
 
@@ -78,15 +71,21 @@ const slugs = [
   "figma",
 ];
 
-export function SkillIconCloud() {
+export default function SkillIconCloud() {
   return (
-    <div className="flex flex-col items-center justify-center w-full px-6 py-10">
-      {/* Section Heading */}
-      <div className="m-20">
+    <div className="flex flex-col items-center justify-center w-full px-6 pb-40 mb-6">
+      <TextRevealCard
+        text="My Digital Toolkit"
+        revealText="My Digital Toolkit"
+        bgColor="white"
+      />
+      <div className="px-30 pb-22">
+     
         <p className="text-2xl md:text-6xl font-semibold pb-15 text-center bg-clip-text text-transparent bg-gradient-to-b from-blue-500 to-blue-950">
           Skills That Shape My Development Journey
         </p>
-        <p className="text-lg text-center text-gray-300 max-w-2xl  mx-auto">
+
+        <p className="text-lg text-center text-gray-400 max-w-2xl  mx-auto">
           A blend of expertise across frontend, backend, mobile, and cloud
           technologies, helping me build scalable and high-performance
           applications.
@@ -95,51 +94,50 @@ export function SkillIconCloud() {
       {/* Skill Icons & Cards Container */}
       <div className="flex flex-col md:flex-row items-center justify-center gap-10 w-full max-w-6xl">
         {/* Icon Cloud */}
-        <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden rounded-lg border bg-background px-10 pb-10 pt-6">
+        <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden  bg-background px-10 pb-10 pt-6">
           <IconCloud iconSlugs={slugs} />
         </div>
 
-        {/* Skill Cards */}
         <div className="flex-1 flex flex-col items-center justify-center space-y-6">
-          {/* Skill Categories at the Top */}
           <div className="text-center space-y-4">
-            {/* Development Skills */}
-            {/* <div>
+            <div>
               <h3 className="text-xl font-semibold text-blue-500">
                 Development
               </h3>
-              <p className="text-gray-300">
+              <p className="text-gray-500">
                 HTML, CSS, JavaScript, TypeScript, React.js, Next.js, React
                 Native (Android), Node.js, MySQL, SQL
               </p>
-            </div> */}
+            </div>
 
             {/* UI/UX & Frontend Libraries */}
-           
+            <div>
+              <h3 className="text-xl font-semibold text-blue-500">
+                UI/UX & Frontend Libraries
+              </h3>
+              <p className="text-gray-500">Figma, Canva, MUI, Tailwind CSS</p>
+            </div>
 
-            {/* Tools & DevOps */}
-            {/* <div>
+            <div>
               <h3 className="text-xl font-semibold text-blue-500">
                 Tools & DevOps
               </h3>
-              <p className="text-gray-300">
+              <p className="text-gray-500">
                 Git, GitHub, Jira, AWS, Docker, DBeaver
               </p>
-            </div> */}
-
-            {/* Soft Skills */}
-            {/* <div>
+            </div>
+            <div>
               <h3 className="text-xl font-semibold text-blue-500">
                 Soft Skills
               </h3>
-              <p className="text-gray-300">
+              <p className="text-gray-500 ">
                 Community Management, Teamwork, Time Management, Adaptability
               </p>
-            </div> */}
+            </div>
           </div>
-
-          {/* Cards Below the Skills */}
-          <DisplayCards cards={defaultCards} />
+          <div className="pt-7">
+            <DisplayCards cards={defaultCards} />
+          </div>
         </div>
       </div>
     </div>

@@ -1,18 +1,28 @@
-import { LandingHero } from "../src/components/components/ui/main/hero";
-import { GoogleGeminiEffectDemo } from "@/src/components/components/ui/main/about";
-import { AnimeNavBarDemo } from "@/src/components/components/ui/navbar/nav";
-import { TimelineDemo } from "@/src/components/components/ui/main/exp";
-import { SkillIconCloud } from "@/src/components/components/ui/main/skill";
+
+// import { GoogleGeminiEffectDemo } from "@/pages/about";
+import { AnimeNavBarDemo } from "@/src/components/ui/navbar/nav";
+
+// import { SkillIconCloud } from "@/pages/skill";
+
+import GoogleGeminiEffectDemo from "./about/page";
+import LandingHero from "./hero/page";
+import TimelineDemo from "./experience/page";
+import GallerySection from "./gallery/page";
+import ProjectSection from "./project/page";
+import SkillIconCloud from "./skill/page";
+import Footer from "./footer/page";
+
+
 
 export default function Home() {
   return (
     <>
       <div>
         <div className="m-20">
-          <AnimeNavBarDemo />
+          <AnimeNavBarDemo/>
           <main>
             <section>
-              <LandingHero />
+              <LandingHero/>
             </section>
             <section>
               <GoogleGeminiEffectDemo />
@@ -22,9 +32,14 @@ export default function Home() {
         <div className="mt-90">
           <TimelineDemo />
         </div>
-        <div className="m-20">
+        <div className="">
           <SkillIconCloud />
         </div>
+        <div className="">
+          <ProjectSection/>
+        </div>
+          <GallerySection/>
+          <Footer/>
       </div>
     </>
   );

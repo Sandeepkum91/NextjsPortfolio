@@ -3,13 +3,13 @@
 import * as React from "react" // Import React
 import { Home, FileText, CreditCard, Info } from "lucide-react"
 import { AnimeNavBar } from "./anime-navbar"
-// import { AnimeNavBar } from "@/components/ui/anime-navbar"
+
 
 const items = [
   {
     name: "Home",
-    url: "/src/components/components/ui/main/hero.tsx",
-    href: "/src/components/components/ui/main/hero.tsx",
+    url: "/hero",
+    href: "/hero",
     icon: Home,
   },
   {
@@ -32,6 +32,6 @@ const items = [
   },
 ]
 
-export function AnimeNavBarDemo() {
+export  function AnimeNavBarDemo() {
   return <AnimeNavBar items={items} defaultActive="Home" />
 }

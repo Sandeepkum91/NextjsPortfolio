@@ -1,9 +1,10 @@
+import { Timeline } from "@/src/components/ui/timeline";
 import Image from "next/image";
 import React from "react";
-import { Timeline } from "../timeline";
+// import { Timeline } from "../src/components/ui/timeline";
 // import { Timeline } from "@/components/ui/timeline";
 
-export function TimelineDemo() {
+export default function TimelineDemo() {
   const data = [
     {
       title: "2024",
@@ -149,14 +150,8 @@ export function TimelineDemo() {
     },
   ];
   return (
-  
-  <>    
-
-
+    <>
       <Timeline data={data} />
-
-  
- </>
-
+    </>
   );
 }
